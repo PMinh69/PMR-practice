@@ -1,0 +1,187 @@
+<form class="exam-detail-form">
+  <div class="form-row">
+    <div class="row-group flex-1">
+      <div class="input-wrapper flex-1">
+        <select>
+          <option value="" disabled selected hidden>
+            Choose service/ gói khám phá
+          </option>
+        </select>
+        <i class="fa-solid fa-chevron-down select-icon"></i>
+      </div>
+      <button type="button" class="btn-teal-filled">
+        <i class="fa-solid fa-plus"></i> Thêm bộ CĐ
+      </button>
+    </div>
+    <div class="input-wrapper flex-1">
+      <input type="text" placeholder="Lý do khám" />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="input-wrapper flex-1">
+      <select>
+        <option value="1412">Phòng 1412 - Khoa PMR</option>
+      </select>
+      <i class="fa-solid fa-chevron-down select-icon"></i>
+    </div>
+    <div class="input-wrapper flex-1">
+      <select>
+        <option value="" disabled selected hidden>Cộng tác viên</option>
+      </select>
+      <i class="fa-solid fa-chevron-down select-icon"></i>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="input-wrapper flex-1">
+      <select>
+        <option value="" disabled selected hidden>Bác sĩ khám*</option>
+      </select>
+      <i class="fa-solid fa-chevron-down select-icon"></i>
+    </div>
+    <div class="input-wrapper flex-1">
+      <input type="text" placeholder="Chuẩn đoán ban đầu" />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="input-wrapper flex-1">
+      <input type="text" value="12/12/2024 12:00" />
+      <i class="fa-regular fa-calendar"></i>
+    </div>
+    <div class="input-wrapper flex-1">
+      <input type="text" placeholder="Ghi chú" />
+    </div>
+  </div>
+
+  <div class="vital-signs-section">
+    <div class="vital-header">
+      <i class="fa-solid fa-chevron-down"></i>
+      <h2>Thông tin sinh tồn</h2>
+    </div>
+    <div class="vital-body">
+      <div class="vital-column">
+        <div class="vital-field">
+          <label>Mạch</label>
+          <div class="input-wrapper"><input type="text" placeholder="Lần/phút" /></div>
+        </div>
+        <div class="vital-row vital-pair-row">
+          <div class="vital-field">
+            <label>Cân nặng</label>
+            <div class="input-wrapper"><input type="text" placeholder="Kg" /></div>
+          </div>
+          <div class="vital-field">
+            <label>Chiều cao</label>
+            <div class="input-wrapper"><input type="text" placeholder="cm" /></div>
+          </div>
+        </div>
+        <div class="vital-field">
+          <label>Nhiệt độ</label>
+          <div class="input-wrapper"><input type="text" placeholder="Nhiệt độ" /></div>
+        </div>
+      </div>
+
+      <div class="vital-column">
+        <div class="vital-row vital-pressure-row">
+          <label>Huyết áp</label>
+          <div class="input-wrapper flex-1"><input type="text" placeholder="Tối đa" /></div>
+          <i class="fa-solid fa-arrow-right arrow-sep"></i>
+          <div class="input-wrapper flex-1"><input type="text" placeholder="Phút" /></div>
+        </div>
+        <div class="vital-field">
+          <label>Chỉ số BMI</label>
+          <div class="input-wrapper"><input type="text" placeholder="Kg/m²" /></div>
+        </div>
+        <div class="vital-field">
+          <label>SpO2</label>
+          <div class="input-wrapper"><input type="text" placeholder="SpO2" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cls-section">
+    <div class="cls-header">
+      <span class="cls-title">Dịch vụ CLS (0)</span>
+      <button type="button" class="btn-cls-outline">
+        <i class="fa-solid fa-plus"></i> CĐHA
+      </button>
+      <button type="button" class="btn-cls-outline">
+        <i class="fa-solid fa-plus"></i> XN
+      </button>
+      <button type="button" class="btn-cls-outline">
+        <i class="fa-solid fa-plus"></i> Nhóm
+      </button>
+      <div class="checkbox-options">
+        <label class="checkbox-label">
+          <input type="checkbox" checked /> Không thu tiền trước khi thực hiện
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" /> Được giảm giá
+        </label>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="cls-table">
+        <thead>
+          <tr>
+            <th style="width: 50px">STT</th>
+            <th>Dịch vụ</th>
+            <th>Trạng thái</th>
+            <th>Đơn giá</th>
+            <th>Số lượng</th>
+            <th>Giảm giá</th>
+            <th>Phụ phí</th>
+            <th>Còn lại</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Chụp cộng hưởng từ 2</td>
+            <td>
+              <span class="status-warning">Chưa TT</span> - Chưa thực hiện
+            </td>
+            <td>20.000</td>
+            <td>1</td>
+            <td>20%</td>
+            <td>0</td>
+            <td>20.000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Chụp cộng hưởng từ 2</td>
+            <td>
+              <span class="status-warning">Chưa TT</span> - Chưa thực hiện
+            </td>
+            <td>20.000</td>
+            <td>1</td>
+            <td>20%</td>
+            <td>0</td>
+            <td>20.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="bottom-actions">
+    <button type="button" class="btn-bottom-outline">
+      <i class="fa-regular fa-user"></i> Thêm mới NB
+    </button>
+    <button type="button" class="btn-bottom-outline">
+      <i class="fa-solid fa-plus"></i> Thêm mới CK
+    </button>
+    <button type="button" class="btn-bottom-outline">
+      <i class="fa-solid fa-barcode"></i> In mã
+    </button>
+    <button type="button" class="btn-bottom-outline">
+      <i class="fa-solid fa-print"></i> In phiếu
+    </button>
+    <button type="submit" class="btn-bottom-filled">
+      <i class="fa-solid fa-rotate"></i> Cập nhật
+    </button>
+  </div>
+</form>

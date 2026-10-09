@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thêm Ca Khám - Khám Bệnh</title>
+    <link rel="stylesheet" href="Create.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar-teal"></aside>
+
+      <div class="main-wrapper">
+        <header class="top-header">
+          <div class="panel-header-tab">
+            <span class="panel-tab">Danh sách ca khám</span>
+          </div>
+          <a href="Service.html"
+            ><div class="panel-header-tab">
+              <span class="panel-tab">Danh sách dịch vụ</span>
+            </div></a
+          >
+          <div class="header-right">
+            <h1 class="clinic-name">
+              TRUNG DUC Clininc <i class="fa-solid fa-chevron-down"></i>
+            </h1>
+            <div class="user-profile">
+              <span>Thanhvtt</span>
+              <i class="fa-solid fa-chevron-down"></i>
+              <img src="./img/avt.jpg" alt="Avatar" class="avatar" />
+            </div>
+          </div>
+        </header>
+
+        <main class="content-container">
+          <div class="form-section">
+            <div class="sub-tabs">
+              <a href="Create.html" class="sub-tab active">
+                <i class="fa-solid fa-rotate"></i> THÊM CA KHÁM
+              </a>
+              <a href="Info.html" class="sub-tab">
+                <i class="fa-regular fa-clipboard"></i> THÔNG TIN NGƯỜI BỆNH
+              </a>
+            </div>
+
+            <div class="section-header">
+              <h3>Thông tin người bệnh</h3>
+              <button class="btn-reset" type="reset" form="createForm">
+                <i class="fa-solid fa-rotate-right"></i>
+              </button>
+            </div>
+
+            <form class="patient-form" id="createForm" novalidate>
+              <div class="form-row">
+                <div class="input-wrapper flex-1">
+                  <input type="text" id="fullname" value="Nguyễn Tô Lâm" />
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="input-wrapper flex-1">
+                  <input
+                    type="text"
+                    id="citizen_card"
+                    placeholder="CCCD/Hộ chiếu"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div
+                  class="input-wrapper flex-1 required-field date-input-wrapper"
+                >
+                  <input
+                    type="text"
+                    id="dob"
+                    placeholder="Ngày sinh*"
+                    aria-label="Ngày sinh"
+                    autocomplete="bday"
+                    required
+                  />
+                  <i class="fa-regular fa-calendar"></i>
+                  <span class="error-msg" id="dob-error"
+                    >Cần nhập thông tin bắt buộc</span
+                  >
+                </div>
+                <div class="input-wrapper flex-1 required-field">
+                  <select id="gender" required>
+                    <option value="" disabled selected hidden>
+                      Giới tính*
+                    </option>
+                    <option value="male">Nam</option>
+                    <option value="female">Nữ</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down select-icon"></i>
+                  <span class="error-msg">Cần nhập thông tin bắt buộc</span>
+                </div>
+                <div class="input-wrapper flex-1">
+                  <input type="text" id="phone" placeholder="Số điện thoại" />
+                </div>
+                <div class="input-wrapper flex-1">
+                  <input type="text" id="email" placeholder="Email" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="input-wrapper flex-1">
+                  <select id="province" onchange="loadWards(this.value)">
+                    <option value="" selected hidden>Tỉnh/Thành phố</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down select-icon"></i>
+                </div>
+                <div class="input-wrapper flex-1">
+                  <select id="ward">
+                    <option value="" selected hidden>Phường/Xã</option>
+                  </select>
+                  <i class="fa-solid fa-chevron-down select-icon"></i>
+                </div>
+                <div class="input-wrapper flex-1">
+                  <input type="text" id="address" placeholder="Địa chỉ" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="input-wrapper flex-2">
+                  <input
+                    type="text"
+                    id="insurance_id"
+                    placeholder="Mã thẻ BHYT"
+                  />
+                </div>
+                <div class="input-wrapper flex-2 insurance-dates">
+                  <input
+                    type="text"
+                    id="bhyt_date"
+                    placeholder="Ngày bắt đầu BHYT - Ngày kết thúc BHYT"
+                    aria-label="Ngày bắt đầu BHYT - Ngày kết thúc BHYT"
+                  />
+                  <i class="fa-regular fa-calendar"></i>
+                  <span class="error-msg" id="bhyt-date-error"></span>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn-save">
+                  <i class="fa-regular fa-floppy-disk"></i> Lưu lại
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="divider-column"></div>
+
+          <div class="info-section">
+            <a href="Main.html"><button>back</button></a>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="Create.js"></script>
+  </body>
+</html>

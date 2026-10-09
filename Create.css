@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 13px;
+  color: #333;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f4f6f8;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar-teal {
+  width: 24px;
+  background-color: #00796b;
+  flex-shrink: 0;
+}
+
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 0;
+  background-color: #fff;
+}
+
+.top-header {
+  height: 50px;
+  background-color: #f5f7f9;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-right: 20px;
+  flex-shrink: 0;
+}
+
+.panel-header-tab {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 10px;
+  height: 100%;
+}
+
+.panel-tab {
+  background-color: #fff;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: #00796b;
+  border: 1px solid #e0e0e0;
+  border-bottom: 1px solid #fff;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  bottom: -1px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+  color: #00796b;
+  height: 100%;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+  color: #00796b;
+}
+
+.clinic-name {
+  font-size: 16px;
+  color: #007b6c;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #007b6c;
+}
+
+.user-profile span {
+  color: #007b6c;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.content-container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.form-section {
+  flex: 1;
+  padding: 16px 24px;
+  overflow-y: auto;
+  max-width: 50%;
+}
+
+.divider-column {
+  width: 1px;
+  background-color: #e0e0e0;
+  margin: 16px 0;
+}
+
+.info-section {
+  flex: 1;
+  padding: 16px;
+}
+
+.sub-tabs {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+}
+
+.sub-tab {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  font-size: 12px;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 4px;
+}
+
+.sub-tab.active {
+  color: #00796b;
+  border-bottom: 2px solid #00796b;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.section-header h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+}
+
+.btn-reset {
+  border: none;
+  background: #f0f2f5;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #555;
+}
+
+.patient-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  outline: none;
+  font-size: 12px;
+  background-color: #fff;
+  color: #333;
+}
+
+.input-wrapper select {
+  appearance: none;
+  color: #888;
+}
+
+.input-wrapper i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #888;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.input-wrapper .clear-btn {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.error-msg {
+  display: none;
+  color: #ff4d4f;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.input-wrapper.show-error .error-msg {
+  display: block;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.btn-save {
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn-save:hover {
+  background-color: #004d40;
+}

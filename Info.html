@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông Tin Người Bệnh - Khám Bệnh</title>
+    <link rel="stylesheet" href="Info.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar-teal"></aside>
+
+      <div class="main-wrapper">
+        <header class="top-header">
+          <div class="panel-header-tab">
+            <span class="panel-tab">Danh sách ca khám</span>
+          </div>
+          <div class="header-right">
+            <h1 class="clinic-name">
+              TRUNG DUC Clininc <i class="fa-solid fa-chevron-down"></i>
+            </h1>
+            <div class="user-profile">
+              <span>Thanhvtt</span>
+              <i class="fa-solid fa-chevron-down"></i>
+              <img src="./img/avt.jpg" alt="Avatar" class="avatar" />
+            </div>
+          </div>
+        </header>
+
+        <main class="content-container">
+          <div class="form-section">
+            <div class="sub-tabs">
+              <a href="Create.html" class="sub-tab">
+                <i class="fa-solid fa-rotate"></i> THÊM CA KHÁM
+              </a>
+              <a href="Info.html" class="sub-tab active">
+                <i class="fa-regular fa-clipboard"></i> THÔNG TIN NGƯỜI BỆNH
+              </a>
+            </div>
+            <div class="patient-profile-card">
+              <img
+                src="./img/avt.jpg"
+                alt="Avatar Bệnh Nhân"
+                class="patient-avatar"
+              />
+              <div class="patient-details">
+                <div class="patient-header">
+                  <span class="patient-id"
+                    >BN 0828 | Nam | 1 ngày | 250828001</span
+                  >
+                  <a href="#" class="link-pmr">- Xem CK PMR</a>
+                  <button class="btn-icon-small">
+                    <i class="fa-solid fa-pen"></i>
+                  </button>
+                  <button class="btn-icon-small">
+                    <i class="fa-solid fa-rotate-right"></i>
+                  </button>
+                </div>
+                <p class="info-line">
+                  <i class="fa-solid fa-house"></i> 27 - Xã Bắc Hồng - Huyện
+                  Đông Anh - Thành phố Hà Nội
+                </p>
+                <p class="info-line">
+                  <i class="fa-solid fa-phone"></i> 1900 1000 &nbsp;&nbsp;
+                  <i class="fa-regular fa-id-card"></i> A14785236
+                </p>
+                <p class="info-line">
+                  <i class="fa-regular fa-calendar"></i> 12/12/2024
+                </p>
+              </div>
+            </div>
+            <div class="action-tabs">
+              <button
+                class="action-tab active"
+                id="exam-info-tab"
+                onclick="loadPage('Detail.html', 'exam-info-tab')"
+              >
+                <i class="fa-regular fa-clipboard"></i> Chi tiết ca khám
+                (50130001)
+              </button>
+
+              <button
+                class="action-tab"
+                id="history-tab"
+                onclick="loadPage('History.html', 'history-tab').then(renderHistory)"
+              >
+                <i class="fa-solid fa-rotate-left"></i> Lịch sử ca khám
+                (<span>20</span>)
+              </button>
+
+              <button class="action-tab">
+                <i class="fa-solid fa-clock-rotate-left"></i> Lịch sử hoạt động
+                (6)
+              </button>
+            </div>
+            <div class="main-content-body" id="main-content-container"></div>
+          </div>
+
+          <div class="divider-column"></div>
+          <div class="info-section"></div>
+        </main>
+      </div>
+    </div>
+    <script src="Info.js"></script>
+    <script src="History.js"></script>
+  </body>
+</html>

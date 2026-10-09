@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: #eef2f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.modal-overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    width: 98%;
+    height: 96vh;
+    background-color: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #007B6C;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+.modal-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.sidebar-left {
+    width: 230px;
+    background-color: #F5F5F5;
+    border-right: 1px solid #e8e8e8;
+    flex-shrink: 0;
+}
+
+.main-content {
+    flex: 1;
+    padding: 16px 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.section-header i {
+    font-size: 12px;
+}
+
+.selected-services-box {
+    background-color: #F6F9FF;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 10px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 24px;
+}
+
+.service-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.service-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-name {
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.service-status {
+    font-size: 12px;
+    color: #8c8c8c;
+    margin-top: 2px;
+}
+
+.text-teal .service-name {
+    color: #007B6C;
+}
+
+.text-dark .service-name {
+    color: #333;
+}
+
+.available-services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.search-box {
+    position: relative;
+    width: 280px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 6px 30px 6px 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    font-size: 13px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #007B6C;
+}
+
+.search-box i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bfbfbf;
+    font-size: 13px;
+}
+
+.available-services-list .services-grid {
+    padding-top: 8px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icon-red {
+    color: #ff4d4f;
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+.icon-blue {
+    color: #1890ff;
+    font-size: 15px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 12px 20px;
+    border-top: 1px solid #e8e8e8;
+    background-color: #ffffff;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-cancel {
+    background-color: #ffffff;
+    border: 1px solid #ff4d4f;
+    color: #ff4d4f;
+}
+
+.btn-cancel:hover {
+    background-color: #fff1f0;
+}
+
+.btn-submit {
+    background-color: #007B6C;
+    border: 1px solid #007B6C;
+    color: #ffffff;
+}
+

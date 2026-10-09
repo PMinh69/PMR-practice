@@ -1,0 +1,233 @@
+<div class="prescription-container">
+  <div class="prescription-header">
+    <div class="title-wrapper">
+      <i class="fa-solid fa-paperclip icon-clip"></i>
+      <h3>ĐƠN THUỐC KÊ LÚC 16:30 09/09/2025</h3>
+    </div>
+    <div class="action-buttons">
+      <button class="btn-action btn-delete">
+        <i class="fa-regular fa-trash-can"></i> Xóa đơn
+      </button>
+      <button class="btn-action btn-outline">
+        <i class="fa-solid fa-paperclip"></i> Đơn thuốc mẫu
+      </button>
+      <button class="btn-action btn-outline-blue">
+        <i class="fa-solid fa-share-nodes"></i> Chia sẻ
+      </button>
+      <button class="btn-action btn-teal">
+        <i class="fa-solid fa-right-from-bracket"></i> Xuất thuốc
+      </button>
+      <button class="btn-action btn-teal">
+        <i class="fa-solid fa-print"></i> In đơn thuốc
+      </button>
+    </div>
+  </div>
+
+  <div class="prescription-status-bar">
+    <button type="button" class="status-toggle" onclick="toggleStatus()">
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <span>Trạng thái:
+      <span id="statusDisplay" data-status="true">Đã xuất thuốc</span>
+    </span>
+    <span class="divider">|</span>
+    <span>Bác sỹ kê toa: <strong>Nguyễn Tô Lâm</strong></span>
+    <span class="divider">|</span>
+    <span>Dược sĩ: <strong>Nguyễn Tô Lâm</strong></span>
+  </div>
+
+  <div id="alertBox" class="alert-box">
+    <i class="fa-regular fa-circle-question"></i>
+    <span>Đơn thuốc đã xuất hoặc đã hoàn tất ca khám. Bạn không thể thêm thuốc vào đơn!</span>
+  </div>
+
+  <div id="formAddMedicine" class="form-add-medicine" style="display: none;">
+    <div class="form-row">
+      <input type="text" class="input-full" placeholder="Nhập tên thuốc để lựa chọn" />
+      <input type="text" class="input-full" placeholder="Nhập tên thuốc để lựa chọn" />
+    </div>
+    <div class="form-row">
+      <input type="text" class="input-third" placeholder="Số lượng" />
+      <div class="select-wrapper input-third">
+        <select>
+          <option value="" disabled selected hidden>Đơn vị tính</option>
+          <option value="vien">Viên</option>
+          <option value="goi">Gói</option>
+          <option value="chai">Chai</option>
+        </select>
+        <i class="fa-solid fa-chevron-down select-icon"></i>
+      </div>
+      <input type="text" class="input-third" placeholder="Đơn giá" />
+    </div>
+    <div class="form-row align-center">
+      <span class="label-bold">Bệnh nhân đã có</span>
+      <input type="text" class="input-small" value="0" />
+    </div>
+  </div>
+
+  <table class="medicine-table">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Dịch vụ</th>
+        <th>Tên thuốc/ hàm lượng/ hướng dẫn sử dụng</th>
+        <th>Số lượng</th>
+        <th>Thực xuất</th>
+        <th>Đơn vị tính</th>
+        <th>Thuốc hay TPCN</th>
+        <th>Thành tiền</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>
+          <div class="btn-sort-group">
+            <button class="btn-sort"><i class="fa-solid fa-chevron-down"></i></button>
+            <button class="btn-sort"><i class="fa-solid fa-chevron-up"></i></button>
+          </div>
+        </td>
+        <td>CKDCipol-N 25mg (Cyclosporin)</td>
+        <td>1</td>
+        <td>1</td>
+        <td>Viên</td>
+        <td>Thuốc</td>
+        <td><strong>Đang cập nhật</strong></td>
+        <td>
+          <i class="fa-regular fa-pen-to-square btn-edit"></i>
+          <i class="fa-regular fa-trash-can btn-remove"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>
+          <div class="btn-sort-group">
+            <button class="btn-sort"><i class="fa-solid fa-chevron-down"></i></button>
+            <button class="btn-sort"><i class="fa-solid fa-chevron-up"></i></button>
+          </div>
+        </td>
+        <td>CKDCipol-N 25mg (Cyclosporin)</td>
+        <td>1</td>
+        <td>1</td>
+        <td>Viên</td>
+        <td>Thuốc</td>
+        <td><strong>Đang cập nhật</strong></td>
+        <td>
+          <i class="fa-regular fa-pen-to-square btn-edit"></i>
+          <i class="fa-regular fa-trash-can btn-remove"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>
+          <div class="btn-sort-group">
+            <button class="btn-sort"><i class="fa-solid fa-chevron-down"></i></button>
+            <button class="btn-sort"><i class="fa-solid fa-chevron-up"></i></button>
+          </div>
+        </td>
+        <td>CKDCipol-N 25mg (Cyclosporin)</td>
+        <td>1</td>
+        <td>1</td>
+        <td>Viên</td>
+        <td>Thuốc</td>
+        <td><strong>Đang cập nhật</strong></td>
+        <td>
+          <i class="fa-regular fa-pen-to-square btn-edit"></i>
+          <i class="fa-regular fa-trash-can btn-remove"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>
+          <div class="btn-sort-group">
+            <button class="btn-sort"><i class="fa-solid fa-chevron-down"></i></button>
+            <button class="btn-sort"><i class="fa-solid fa-chevron-up"></i></button>
+          </div>
+        </td>
+        <td>CKDCipol-N 25mg (Cyclosporin)</td>
+        <td>1</td>
+        <td>1</td>
+        <td>Viên</td>
+        <td>Thuốc</td>
+        <td><strong>Đang cập nhật</strong></td>
+        <td>
+          <i class="fa-regular fa-pen-to-square btn-edit"></i>
+          <i class="fa-regular fa-trash-can btn-remove"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="prescription-notes-grid">
+    <div class="note-box">
+      <span class="text-teal">Lời dặn của Bác Sĩ</span>
+      <textarea placeholder="Nhập mô tả"></textarea>
+    </div>
+    <div class="note-box">
+      <span class="text-teal">Lưu ý</span>
+      <p class="sub-text">Khám lại khi hết thuốc. Khi có dấu hiệu bất thường thì khám lại ngay.</p>
+      <div class="revisit-inputs">
+        <div class="input-group">
+          <label>Hẹn tái khám</label>
+          <div class="input-date">
+            <input type="text" placeholder="dd/mm/yyyy" />
+            <i class="fa-regular fa-calendar"></i>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>Tái khám sau</label>
+          <div class="input-date">
+            <input type="text" placeholder="dd/mm/yyyy" />
+            <i class="fa-regular fa-calendar"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">
+    <i class="fa-solid fa-chevron-down"></i>
+    <span class="text-teal">Thông tin đơn nhận</span>
+  </div>
+
+  <table class="receiver-info-table">
+    <tbody>
+      <tr>
+        <td class="info-label">Người nhận thuốc</td>
+        <td class="info-value">Nguyễn Tô Lâm</td>
+        <td class="info-label">Thời gian có thể nhận</td>
+        <td class="info-value">12/12/2024</td>
+      </tr>
+      <tr>
+        <td class="info-label">SĐT người nhận</td>
+        <td class="info-value">1900 1000</td>
+        <td class="info-label">Phương thức thanh toán</td>
+        <td class="info-value">Thanh toán tiền mặt</td>
+      </tr>
+      <tr>
+        <td class="info-label">Địa chỉ nhận thuốc</td>
+        <td class="info-value"></td>
+        <td class="info-label">Ghi chú</td>
+        <td class="info-value"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-title text-teal">
+    <span class="text-teal">Các toa thuốc khác của người bệnh</span>
+  </div>
+
+  <table class="history-table">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>Thời gian khám</th>
+        <th>Thời gian kê toa</th>
+        <th>Người tạo</th>
+        <th>Trạng thái</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>

@@ -1,0 +1,145 @@
+<div class="info-section">
+  <div class="form-group-info">
+    <label>Tiền sử bệnh</label>
+    <div class="input-action-wrapper">
+      <input
+        type="text"
+        placeholder="Nhập tên tiền sử bệnh"
+        id="medicalHistory"
+      />
+      <button type="button" class="btn-icon btn-copy">
+        <i class="fa-regular fa-copy"></i>
+      </button>
+      <button type="button" class="btn-icon btn-save">
+        <i class="fa-regular fa-floppy-disk"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="form-group-info">
+    <label>Triệu chứng lâm sàng</label>
+    <div class="input-action-wrapper">
+      <input
+        type="text"
+        placeholder="Nhập triệu chứng lâm sàng"
+        id="clinicalSymptoms"
+        value="Đau tức ngực, khó thở 03 ngày nay, hiện không ho, nặng vùng đầu, đau mỏi vai gáy lan hai tay, người bệnh chưa khám và điều trị gì "
+      />
+      <button type="button" class="btn-icon btn-copy">
+        <i class="fa-regular fa-copy"></i>
+      </button>
+      <button type="button" class="btn-icon btn-save">
+        <i class="fa-regular fa-floppy-disk"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="form-group-info">
+    <label>Chẩn đoán ban đầu</label>
+    <div class="input-action-wrapper">
+      <input
+        type="text"
+        placeholder="Nhập tên chẩn đoán ban đầu"
+        id="initialDiagnosis"
+      />
+      <button type="button" class="btn-icon btn-copy">
+        <i class="fa-regular fa-copy"></i>
+      </button>
+      <button type="button" class="btn-icon btn-save">
+        <i class="fa-regular fa-floppy-disk"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="form-group-info">
+    <label>Chẩn đoán ICD 10</label>
+    <div class="icd-tags-container" id="icdTagsContainer">
+      <div class="icd-tag">
+        <span>H24 - Papillomavirus gây các bệnh đã được phân</span>
+        <button type="button" class="remove-tag" >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="icd-tag">
+        <span>H24 - Papillomavirus gây các bệnh đã được phân</span>
+        <button type="button" class="remove-tag">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="icd-tag">
+        <span>H24 - Papillomavirus gây các bệnh đã được phân</span>
+        <button type="button" class="remove-tag">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="icd-tag">
+        <span>H24 - Papillomavirus gây các bệnh đã được phân</span>
+        <button type="button" class="remove-tag">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group-info">
+    <label>Kết luận của bác sĩ</label>
+    <div class="input-action-wrapper">
+      <input
+        type="text"
+        placeholder="Nhập kết luận của bác sĩ"
+        id="doctorConclusion"
+      />
+      <button type="button" class="btn-icon btn-copy">
+        <i class="fa-regular fa-copy"></i>
+      </button>
+      <button type="button" class="btn-icon btn-save">
+        <i class="fa-regular fa-floppy-disk"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="cls-header-actions">
+    <label class="cls-title">Chỉ định CLS (0)</label>
+    <div class="cls-controls">
+      <div class="cls-select-wrapper">
+        <select>
+          <option value="" disabled selected hidden>
+            Chọn để thêm chỉ định
+          </option>
+        </select>
+      </div>
+      <div class="cls-btn-group">
+        <button type="button" class="btn-outline">
+          <i class="fa-solid fa-plus"></i> CĐHA
+        </button>
+        <button type="button" class="btn-outline">
+          <i class="fa-solid fa-plus"></i> Xét nghiệm
+        </button>
+        <button type="button" class="btn-outline">
+          <i class="fa-solid fa-plus"></i> Nhóm
+        </button>
+        <button type="button" class="btn-outline">Dịch vụ khám thêm</button>
+        <button type="button" class="btn-outline">Thông tin khác</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table class="services-table">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Dịch vụ</th>
+          <th>Trạng thái</th>
+          <th>Người tạo</th>
+          <th>Thời gian tạo</th>
+          <th>Số lượng</th>
+          <th>Đơn giá</th>
+          <th>Thành tiền</th>
+          <th>Bỏ in</th>
+        </tr>
+      </thead>
+      <tbody id="servicesTableBody"></tbody>
+    </table>
+  </div>
+</div>

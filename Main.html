@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khung Giao Diện Khám Bệnh</title>
+    <link rel="stylesheet" href="Main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar-teal"></aside>
+
+      <div class="page-content">
+        <header class="top-header">
+          <div class="panel-header-tab">
+            <span class="panel-tab">Danh sách ca khám</span>
+          </div>
+          <div class="header-right">
+            <h1 class="clinic-name">
+              TRUNG DUC Clininc <i class="fa-solid fa-chevron-down"></i>
+            </h1>
+            <div class="user-profile">
+              <span>Thanhvtt</span>
+              <i class="fa-solid fa-chevron-down"></i>
+              <img src="./img/avt.jpg" alt="Avatar" class="avatar" />
+            </div>
+          </div>
+        </header>
+
+        <div class="panel-layout">
+          <aside class="left-panel">
+            <div class="filter-form">
+          <div class="radio-group">
+            <label><input type="radio" name="call_status" /> Chờ gọi</label>
+            <label><input type="radio" name="call_status" /> Đã gọi</label>
+            <label
+              ><input type="radio" name="call_status" checked /> Tất cả</label
+            >
+          </div>
+          <div class="radio-group">
+            <label><input type="radio" name="exam_status" /> Chờ khám</label>
+            <label
+              ><input type="radio" name="exam_status" /> Chờ kết luận</label
+            >
+            <label><input type="radio" name="exam_status" /> Đã hoàn tất</label>
+            <label
+              ><input type="radio" name="exam_status" checked /> Tất cả</label
+            >
+          </div>
+          <div class="filter-actions">
+            <button class="btn-icon"><i class="fa-solid fa-xmark"></i></button>
+            <button class="btn-icon">
+              <i class="fa-solid fa-rotate-right"></i>
+            </button>
+            <button class="btn-icon">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+          </div>
+          <div class="input-grid">
+            <div class="input-wrapper">
+              <input type="text" placeholder="dd/mm/yyyy hh:mm" />
+              <i class="fa-regular fa-calendar"></i>
+            </div>
+            <div class="input-wrapper">
+              <input type="text" placeholder="Mã ca khám" />
+              <i class="fa-solid fa-barcode"></i>
+            </div>
+            <div class="input-wrapper">
+              <input type="text" value="Vũ Thúy Thanh" />
+              <i class="fa-solid fa-xmark clear-btn"></i>
+            </div>
+            <div class="input-wrapper">
+              <input type="text" placeholder="Mã bệnh nhân" />
+            </div>
+          </div>
+          <div class="filter-summary">
+            <span
+              >Phòng khám: <strong class="text-teal">Phòng 1413</strong></span
+            >
+            <span
+              >Tổng số:
+              <strong class="text-red" id="patient-count">0 Ca khám</strong></span
+            >
+          </div>
+            </div>
+            <div class="patient-list-scroll">
+              <table class="patient-list-table">
+                <thead>
+                  <tr>
+                    <th>Họ tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Giới tính</th>
+                    <th>Số điện thoại</th>
+                    <th>Email</th>
+                    <th>Tỉnh/Thành phố</th>
+                    <th>Phường/Xã</th>
+                    <th>Địa chỉ</th>
+                  </tr>
+                </thead>
+                <tbody id="patient-list-body">
+                  <tr>
+                    <td colspan="8">Đang tải danh sách...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </aside>
+
+          <div class="divider-column"></div>
+
+          <main class="right-panel">
+          <div class="patient-card">
+            <div class="patient-card-header">
+              <div class="patient-title">
+                <strong>PHAN ĐỨC DUY</strong> - 35 Tuổi, Nam - 240414015 / Khám
+                nội tiết (Khám chuyên gia) - Đang thực hiện
+              </div>
+              <div class="patient-actions">
+                <button class="btn-card-action">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="btn-card-action">
+                  <i class="fa-solid fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="patient-card-body">
+              <div class="info-column">
+                <p><i class="fa-solid fa-phone"></i> 1900 1000</p>
+                <p>
+                  <i class="fa-regular fa-calendar-check"></i> 12/12/2024 12:00
+                  AM
+                </p>
+                <p><i class="fa-solid fa-door-open"></i> PHÒNG 203 KHÁM NỘI</p>
+              </div>
+              <div class="info-column">
+                <p>
+                  <i class="fa-solid fa-location-dot"></i> ĐỊNH HÓA - THÁI
+                  NGUYÊN
+                </p>
+                <p><i class="fa-solid fa-barcode"></i> Mã ca khám: 01952099</p>
+                <p>
+                  <i class="fa-solid fa-user-doctor"></i> BSCKII: Vũ Thúy Thanh
+                </p>
+              </div>
+              <div class="info-column">
+                <p>
+                  <i class="fa-regular fa-envelope"></i> nguyentolam@gmail.com
+                </p>
+                <p>
+                  <i class="fa-solid fa-arrows-up-down"></i> Chiều cao: 165cm |
+                  Cân nặng: 50kg
+                </p>
+                <p>
+                  <i class="fa-solid fa-heart-pulse"></i> Khám nội tiết
+                  (Khám...)
+                </p>
+              </div>
+              <div class="info-column broad">
+                <p>
+                  <i class="fa-regular fa-id-card"></i> 126812681267 (12/12/2023
+                  - 12/12/2024)
+                </p>
+              </div>
+            </div>
+
+            <div class="patient-card-footer">
+              <button class="btn-light-teal">
+                <i class="fa-solid fa-plus"></i> Nhập chỉ số sinh tồn
+              </button>
+              <button class="btn-teal-light">
+                <i class="fa-solid fa-xmark"></i> Bỏ nhận ca khám
+              </button>
+            </div>
+          </div>
+
+          <div class="main-tabs">
+            <button
+              class="tab-item"
+              id="exam-info-tab"
+              onclick="loadPage('List.html', 'exam-info-tab')"
+            >
+              Thông tin ca khám
+            </button>
+
+            <button
+              class="tab-item"
+              id="medicine-tab"
+              onclick="loadPage('Medicine.html', 'medicine-tab')"
+            >
+              Đơn thuốc
+            </button>
+
+            <button
+              class="tab-item active"
+              id="cdha-tab"
+              onclick="loadPage('CDHA.html', 'cdha-tab')"
+            >
+              CĐHA (1/1)
+            </button>
+          </div>
+          <div class="main-content-body" id="main-content-container"></div>
+          </main>
+        </div>
+      </div>
+      <a href="Create.html" class="btn-float-add" title="Thêm ca khám">
+        <i class="fa-solid fa-plus"></i>
+      </a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="Main.js"></script>
+  </body>
+</html>
